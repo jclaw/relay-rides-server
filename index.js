@@ -27,7 +27,7 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/', function(request, response) {
 	response.set('Content-Type', 'text/html');
 	var indexPage = '';
- 	response.send('hello');
+ 	response.send('hellohello');
 });
 
 app.post('/getResults', function(request, response) {
