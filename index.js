@@ -27,7 +27,7 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/', function(request, response) {
 	response.set('Content-Type', 'text/html');
 	var indexPage = '';
- 	response.send('hellohello');
+ 	response.send('relay rides server');
 });
 
 app.post('/getResults', function(request, response) {
