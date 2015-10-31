@@ -34,10 +34,7 @@ app.post('/getResults', function(request, response) {
 
 
 	response.set('Content-Type', 'application/json');
-	console.log("request worked");
 	var data = request.body;
-	console.log("request.body.dest: " + request.body.dest);
-	
 	
 
     var key = "vcn2bew8atv5dgtqtnjmncw3";
@@ -61,7 +58,6 @@ app.post('/getResults', function(request, response) {
 		res.setEncoding('utf8');
 
 		res.on('data', function(chunk) {
-			console.log('BODY: ' + chunk);
 			str += chunk;
 		})
 		res.on('end', function() {
@@ -80,8 +76,7 @@ app.post('/getResults', function(request, response) {
 		console.log('problem with request: ' + e.message);
 	});
 
-	
-	req.write("hello world");
+	//req.write("hello world");
 	req.end();
 
 });
